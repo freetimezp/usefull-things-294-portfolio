@@ -651,8 +651,6 @@ img {
 .work__button.work-active {
     color: var(--first-color);
 }
-/* Active tab */
-
 /*=============== SERVICES ===============*/
 
 /* Hide services info */
@@ -685,6 +683,10 @@ img {
     .projects__card {
         padding-inline: 1rem;
     }
+
+    .work__tabs {
+        padding-inline: 1rem;
+    }
 }
 
 /* For medium devices */
@@ -694,6 +696,7 @@ img {
         margin-inline: auto;
     }
 
+    .work__container,
     .about__container {
         grid-template-columns: 460px;
         justify-content: center;
@@ -711,11 +714,33 @@ img {
     .projects__card {
         width: 350px;
     }
+
+    .work__tabs {
+        width: 330px;
+        justify-self: center;
+    }
 }
 
 @media screen and (min-width: 768px) {
     .home__container {
         width: 600px;
+    }
+
+    .work__container {
+        grid-template-columns: 600px;
+    }
+    .work__area {
+        padding-left: 0;
+    }
+    .work__card {
+        grid-template-columns: repeat(2, 270px);
+        justify-content: center;
+        column-gap: 3rem;
+    }
+    .work__line {
+        left: 0;
+        right: 0;
+        margin-inline: auto;
     }
 }
 
@@ -854,6 +879,25 @@ img {
     .projects__button {
         top: 1.5rem;
         right: 1.5rem;
+    }
+
+    .work__container {
+        grid-template-columns: 1050px;
+        row-gap: 3rem;
+    }
+    .work__card {
+        grid-template-columns: repeat(2, 450px);
+        column-gap: 9rem;
+    }
+    .work__content {
+        row-gap: 5rem;
+    }
+    .work__title {
+        font-size: var(--bigger-font-size);
+    }
+    .work__subtitle,
+    .work__description {
+        font-size: var(--h3-font-size);
     }
 }
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
