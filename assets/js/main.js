@@ -89,3 +89,14 @@ servicesButtons.forEach((button) => {
         }
     });
 });
+
+//testimonials animation
+const tracks = document.querySelectorAll(".testimonials__content");
+
+tracks.forEach((track) => {
+    const cards = [...track.children];
+
+    for (const card of cards) {
+        track.appendChild(card.cloneNode(true));
+    }
+});
