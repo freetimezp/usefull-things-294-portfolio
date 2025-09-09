@@ -114,3 +114,9 @@ copyBtn.addEventListener("click", () => {
         }, 2500);
     });
 });
+
+//footer section // get current year
+const textYear = document.getElementById("footer-year");
+const currentYear = new Date().getFullYear();
+
+textYear.textContent = currentYear;
