@@ -120,3 +120,23 @@ const textYear = document.getElementById("footer-year");
 const currentYear = new Date().getFullYear();
 
 textYear.textContent = currentYear;
+
+//scroll section active link
+const sections = document.querySelectorAll("section[id]");
+
+const scrollActive = () => {
+    const scrollY = window.scrollY;
+
+    sections.forEach((section) => {
+        const id = section.id;
+        const top = section.offsetTop - 50;
+        const height = section.offsetHeight;
+        const link = document.querySelector(".nav__menu a[href*=" + id + "]");
+
+        if (!link) return;
+
+        link.classList.toggle("active-link", scrollY > top && scrollY <= top + height);
+    });
+};
+
+window.addEventListener("scroll", scrollActive);
